@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: javadeployment23
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: javadeployment23
+  template:
+    metadata:
+      labels:
+        app: javadeployment23 
+    spec:
+      containers:
+        - name: javadeployment23 
+          image: kcscr.azurecr.io/javadeployment23
+          ports:
+          - containerPort: 8080
