@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+name: javadeployment23
+spec:
+type: LoadBalancer
+ports:
+    - apiVersion: v1 
+kind: Service 
+metadata: 
+name: javadeployment23
+spec: 
+selector: 
+app: javadeployment23
+ports: 
+    - protocol: TCP 
+port: 80
+targetPort: 8080
+#selector: 
+#run:javadeployment23
+selector: 
+app: javadeployment23
+selector:  
+selector:
+app: javadeployment23
+
